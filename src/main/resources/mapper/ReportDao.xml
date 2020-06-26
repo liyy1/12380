@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.domor.dao.ReportDao">
+
+  <select id="selectList" parameterType="map" resultType="com.domor.model.Report">
+    select * from t_report
+    WHERE type=#{type}
+    <if test="jbrname !=null">
+      and jbrname like '%${jbrname}%'
+    </if>
+    <if test="bjbname !=null">
+      and bjbname like '%${bjbname}%'
+    </if>
+    <if test="stime !=null and stime !=''">
+      and createtime > #{stime}
+    </if>
+    <if test="etime !=null and etime != ''">
+      and createtime &lt; #{etime}
+    </if>
+  </select>
+
+  <select id="selectById" parameterType="java.lang.Integer" resultType="com.domor.model.Report">
+    select * from t_report
+    where id = #{id}
+  </select>
+
+  <insert id="insert" parameterType="com.domor.model.Report">
+    insert into t_report (`type`, jbrname, jbrsex, jbrunit, jbrid, jbrarea, jbraddr, jbrphone, bjbname,
+      bjbsex, bjbduty, bjbarea, bjbunit, bjblevel, bjbtype, bjbmemo, createtime)
+    values (#{type}, #{jbrname}, #{jbrsex}, #{jbrunit}, #{jbrid}, #{jbrarea}, #{jbraddr}, #{jbrphone}, #{bjbname},
+      #{bjbsex}, #{bjbduty}, #{bjbarea}, #{bjbunit}, #{bjblevel}, #{bjbtype}, #{bjbmemo}, #{createtime})
+  </insert>
+  
+</mapper>

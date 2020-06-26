@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.domor.dao.SystemDao">
+
+    <select id="getUser" parameterType="String" resultType="map">
+        SELECT a.*,b.roleType FROM t_sys_user a
+        LEFT JOIN t_sys_role b ON a.role=b.roleId
+        WHERE username=#{username} and b.delete_flag=0 limit 0,1
+    </select>
+
+	<select id="getMenusByUser" parameterType="string" resultType="com.domor.model.Menu">
+    	SELECT a.* FROM t_sys_menu a
+		JOIN t_sys_rights b ON b.menuId = a.menuId
+		JOIN t_sys_user d ON b.roleId = d.role
+		WHERE d.username = #{username}
+		AND a.delete_flag = 0
+		AND d.delete_flag = 0
+		AND a.menuType = 1
+		ORDER BY a.menuOrder DESC, a.createTime ASC 
+    </select>
+    
+    <select id="getActionsByUser" parameterType="string" resultType="java.util.HashMap">
+        select * from t_sys_rights a join t_sys_user b on a.roleId = b.role
+        join t_sys_menu c on a.menuId = c.menuId
+        where a.delete_flag = 0 and b.delete_flag = 0 and c.delete_flag = 0 
+        and b.username = #{username}
+    </select>
+    
+    <select id="getButtonAuth" parameterType="map" resultType="java.util.HashMap">
+	    select c.* from t_sys_rights a 
+		join t_sys_user b on a.roleId = b.role
+		join t_sys_menu c on a.menuId = c.menuId
+		where a.delete_flag = 0 and b.delete_flag = 0 and c.delete_flag = 0 
+		and b.username = #{loginUser} AND f_contains(c.eventStatus,#{status})=1
+    </select>
+
+    <select id="getAllActions" resultType="java.util.HashMap">
+        select * from  t_sys_menu
+        where delete_flag = 0  and <![CDATA[ menuId<>0 ]]>
+    </select>
+
+</mapper>

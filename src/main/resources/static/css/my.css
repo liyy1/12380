@@ -1,0 +1,34 @@
+body{
+	font-size:14px;
+	font-family:"Microsoft YaHei","黑体","宋体","Arial",sans-serif;
+	color: #3c3c3c;
+}
+
+table{
+  font-size:14px;
+}
+
+a{text-decoration:none;color:#3c3c3c;}
+
+.search-param-list li{float: left;list-style: none;}
+
+.ftitle{font-size:14px;font-weight:bold;color:#666;padding:5px 0;margin-bottom:10px;border-bottom:1px solid #ccc;}
+.fitem{margin-bottom:10px;font-size: 14px;}
+.fitem label{display:inline-block;width:80px;}
+
+/* 横向列表 */
+.ht-list, .ht-list li {list-style: none;margin: 0;padding: 0;}
+.ht-list li {float: left;}
+
+.header-menu ul li{width:69px;float:left;}
+.header-menu a:hover{background-color:rgba(0, 0, 0, 0.25);}
+
+/* uploadify */
+.upload_btn_my{
+	background: url('../image/add.png') !important;
+	border: 1px solid #b7b7b7;
+	border-radius: 3px;
+}
+.upload_btn_my1{
+	margin-bottom: 0px !important;
+}
