@@ -1,0 +1,28 @@
+﻿
+.con_next{width:550px;height: 280px; float:left;}
+.banner {left:100px ; width:90%; height:280px; margin:0 auto; position:relative; overflow:hidden;}
+.myimg li{width:550px; height:280px; display:block; position:absolute; left:50%; margin-left:-300px;}
+.myimg li a img{ display:block; width:550px;height:280px;}
+.myimg li span{width:550px;height:40px;background:#001e10;opacity:0.6;
+    filter: "alpha(opacity=57)";filter: alpha(opacity=57);
+    color: #FFFFFF;line-height: 40px;text-align: left;padding-left: 60px;
+    zoom: 1;position:absolute;bottom:0;display:block;}
+.btn{ position:absolute; left:80%; bottom:10px; margin-right: 0px; cursor: pointer;z-index: 300}
+.btn li{width:22px; height:20px;margin-right:10px; float:left;background-color:#a0a0a0;}
+.btn li a{display:block; width:100%; height:100%; text-align:center;line-height:20px;color: #FFFFFF}
+.btn li.mycurrent{ background-color:#FF0000;}
+#con_left li{list-style: disc outside ;margin-left: 130px;width: 470px;}
+#con_left li a{display:block;width:90%;height: 29px;line-height: 29px;
+    border-top:1px dashed  #989898;font-size:15px;}
+#con_left li a:hover{color: #FF0000}
+.report{margin-top: 10px;background: url("../img/report.png") no-repeat center ;
+    width:100%;height:280px;text-align: center;position: relative;
+}
+.report_son{width: 800px;height: 240px;background: #FFFFFF;z-index: 300;position: absolute;
+    left: 280px;top:20px;border-radius: 10px;text-align: left;
+}
+.report_son p{
+    text-indent: 2em;margin-left: 20px;margin-top:20px;line-height: 20px;width: 700px;
+}
+.report_btn{position: absolute;top: 160px;left: 300px;color: white;font-size: 20px;border-radius: 5px;
+background: #A80000;width: 140px;height: 36px;line-height: 36px;}

@@ -1,0 +1,39 @@
+.con1{float: left}
+.con2{float: right;margin-top: 10px;color: #989898}
+.con2 a{color: #3377ff}
+.main{width: 86%; background: #ccd9ff;margin: 0 auto;
+border-radius: 10px;padding: 10px 0;}
+.report_btn{margin-left: 50px;font-size: 15px;border-radius: 5px;color: #FFFFFF;
+    background: #A80000;width: 140px;height: 36px;line-height: 36px;}
+.card{width: 100%;height: 30px;background: #99bbff;text-align: center;font-size: 18px;
+font-weight: 500}
+input{border:1px solid #3377ff;width:150px;height:30px;color:#666;font-size:15px;}
+table{border: 0;padding: 0;margin: 10px auto;width: 100%;}
+table tr{height: 40px;}
+table tr th{text-align:right }
+table tr td{}
+.com-sel {
+    display: inline-block;
+    line-height: 30px;
+    cursor: pointer;
+    border: 1px solid #3377ff;
+}
+.com-opt {
+    width: 100px;
+    cursor: pointer;
+    font-size: 17px;
+    border: 1px ;
+    outline: none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background: url("../img/san.jpg") no-repeat right center transparent;
+}
+.start{color: #FF0000}
+textarea{border:1px solid #3377ff;width:860px;height:60px;text-indent:5px; color:#666;
+    font-size:14px;line-height:20px;margin-left: 20px}
+#checkCode{background: #FFFFFF;display: inline-block;width: 100px;height: 30px;text-align: center;
+    line-height: 30px;background: url("../img/code_bg.gif") center;color: #FFFFFF;font-size: 20px;
+    cursor: pointer}
+#submit_btn{float: right;margin-right: 20px}
+#reset_btn{float: left;margin-left: 20px}

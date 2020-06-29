@@ -28,7 +28,7 @@
     insert into t_report (`type`, jbrname, jbrsex, jbrunit, jbrid, jbrarea, jbraddr, jbrphone, bjbname,
       bjbsex, bjbduty, bjbarea, bjbunit, bjblevel, bjbtype, bjbmemo, createtime)
     values (#{type}, #{jbrname}, #{jbrsex}, #{jbrunit}, #{jbrid}, #{jbrarea}, #{jbraddr}, #{jbrphone}, #{bjbname},
-      #{bjbsex}, #{bjbduty}, #{bjbarea}, #{bjbunit}, #{bjblevel}, #{bjbtype}, #{bjbmemo}, #{createtime})
+      #{bjbsex}, #{bjbduty}, #{bjbarea}, #{bjbunit}, #{bjblevel}, #{bjbtype}, #{bjbmemo}, now())
   </insert>
   
 </mapper>

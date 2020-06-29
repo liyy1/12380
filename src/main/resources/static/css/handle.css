@@ -1,0 +1,6 @@
+.con1{float: left}
+.con2{float: right;margin-top: 10px;color: #989898}
+.con2 a{color: #3377ff}
+.main{width: 86%; background: #ccd9ff;margin: 0 auto;
+border-radius: 10px;padding: 10px 0;}
+.main p{width: 90%;margin:0 auto;text-indent: 2em;line-height: 36px;}

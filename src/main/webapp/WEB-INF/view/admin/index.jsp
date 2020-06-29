@@ -54,7 +54,7 @@
             <dl class="layui-nav-child">
               <dd><a lay-href="/admin/index/editPwd">修改密码</a></dd>
               <hr>
-              <dd style="text-align: center;"><a href="/exit">退出</a></dd>
+              <dd style="text-align: center;"><a href="/admin/exit">退出</a></dd>
             </dl>
           </li>
 

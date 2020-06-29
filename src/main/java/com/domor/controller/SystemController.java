@@ -69,7 +69,7 @@ public class SystemController {
     @RequestMapping("/exit")
 	public String exit(HttpSession session) {
 		session.removeAttribute("user");
-		return "redirect:/admin/login.jsp";
+		return "redirect:/admin/toLogin";
 	}
     
 	@ResponseBody

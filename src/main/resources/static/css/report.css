@@ -1,0 +1,11 @@
+.con1{float: left}
+.con2{float: right;margin-top: 10px;color: #989898}
+.con2 a{color: #3377ff}
+.main{width: 86%; background: #ccd9ff;margin: 0 auto;
+border-radius: 10px;padding: 10px 0;}
+.main p{width: 90%;margin:0 auto;text-indent: 2em;line-height: 36px;}
+.con_bottom{margin: 10px auto;width: 1200px;text-align: center;}
+.con_bottom input{cursor: pointer;}
+.con_bottom div{position: relative;left: -30px;top:15px;}
+.report_btn{margin-left: 50px;font-size: 15px;border-radius: 5px;color: #FFFFFF;
+    background: #A80000;width: 140px;height: 36px;line-height: 36px;}
