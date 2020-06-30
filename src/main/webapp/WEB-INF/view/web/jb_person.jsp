@@ -18,7 +18,7 @@
     <img class="img2" src="/my/img/zgjn.png"  width="1000" height="80" />
     <img class="img3" src="/my/img/huabiao1.png"  width="200" />
     <img class="img5" src="/my/img/red_bg.png"  width="600" height="150"/>
-    <img class="img6" src="/my/img/line_bg.png"  width="1200" />
+    <img class="img6" src="/my/img/line_blue.png"  width="1200" height="80"/>
     <div class="nav">
         <ul>
             <li><a href="/index">首&nbsp;&nbsp;页</a></li>
