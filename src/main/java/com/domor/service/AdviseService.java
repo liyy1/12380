@@ -21,10 +21,8 @@ public class AdviseService {
 		return dao.insert(record);
 	}
 
-	public PagerReturns selectList(Map<String, Object> params){
-		Page page = ParamUtils.startPage(params);
-		List<Advise> advises = dao.selectList(params);
-		return new PagerReturns(advises, page.getTotal());
+	public List<Advise> selectList(Map<String, Object> params){
+		return dao.selectList(params);
 	}
 
 	public Advise selectById(Integer id){

@@ -15,6 +15,9 @@
 					<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-clear'" onclick="resetForm('advise_search_form');">重置</a>
 					<a href="#" class="easyui-linkbutton button-info" data-options="iconCls:'icon-search'"
 					   onclick="search_load('advise_list', 'advise_search_form', 'datagrid')">查询</a>
+
+					<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'" style="margin-left: 20px"
+					   onclick="exportExcel()">导出</a>
 				</div>
 			</form>
 		</div>
@@ -65,6 +68,11 @@ function openDetailDialog(id) {
         }
     });
     $dialog.dialog('open');
+}
+
+function exportExcel(){
+	var params = getFormJson('advise_search_form');
+	window.location.href = "/admin/advise/excel?params="+JSON.stringify(params);
 }
 </script>
 </body>

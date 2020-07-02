@@ -10,6 +10,15 @@
 <link rel="stylesheet" href="/my/layuiadmin/style/admin.css" media="all">
 <script src="/my/layuiadmin/layui/layui.js"></script>
 
+<script>
+    var layer;
+    layui.config({
+        base: '/my/layuiadmin/' //静态资源所在路径
+    }).use(['layer'], function(){
+        layer = layui.layer
+    })
+</script>
+
 <%--easyui--%>
 <link rel="stylesheet" href="/my/easyui/themes/insdep/easyui.css" media="all">
 <link rel="stylesheet" href="/my/easyui/themes/insdep/icon.css" type="text/css">
@@ -24,4 +33,12 @@
 <script src="/my/js/my/formatter.js"></script>
 <script src="/my/js/my/easyui.form.js"></script>
 <script src="/my/js/my/utils.js"></script>
+
+<%--umeditor--%>
+<link href="/my/js/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">var webUrl = "${sessionScope.web_url}";</script>
+<script type="text/javascript" src="/my/js/umeditor/umeditor.config.js"></script>
+<script type="text/javascript" src="/my/js/umeditor/umeditor.js"></script>
+<script type="text/javascript" src="/my/js/umeditor/lang/zh-cn/zh-cn.js"></script>
+
 

@@ -112,7 +112,7 @@ public class ReportController {
 		cellStyle.setBorderLeft(BorderStyle.THIN);
 		Font font = wb.createFont();
 		font.setFontName("宋体");//字体类型
-		font.setFontHeightInPoints((short)12);
+		font.setFontHeightInPoints((short)11);
 		cellStyle.setFont(font);
 		for (int i = 0; i < list.size(); i++) {
 			Report r = list.get(i);

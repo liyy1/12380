@@ -5,10 +5,10 @@
   <select id="selectList" parameterType="map" resultType="com.domor.model.Advise">
     select * from t_advise
     <where>
-      <if test="stime !=null">
+      <if test="stime !=null and stime !=''">
          and createtime > #{stime}
       </if>
-      <if test="etime !=null">
+      <if test="etime !=null and etime !=''">
          and createtime &lt; #{etime}
       </if>
     </where>

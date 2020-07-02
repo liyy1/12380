@@ -95,6 +95,12 @@
                 <cite>意见建议记录</cite>
               </a>
             </li>
+            <li data-name="home" class="layui-nav-item">
+              <a href="javascript:;" lay-href="/admin/law" lay-tips="法律法规维护" lay-direction="4">
+                <i class="layui-icon layui-icon-app"></i>
+                <cite>法律法规维护</cite>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
