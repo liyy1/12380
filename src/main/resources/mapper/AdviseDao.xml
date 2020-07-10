@@ -20,8 +20,8 @@
   </select>
 
   <insert id="insert" parameterType="com.domor.model.Advise" >
-    insert into t_advise (`name`, phone, content, createtime)
-    values (#{name}, #{phone}, #{content}, now())
+    insert into t_advise (`name`, phone, content, ip, createtime)
+    values (#{name}, #{phone}, #{content}, #{ip}, now())
   </insert>
 
 </mapper>

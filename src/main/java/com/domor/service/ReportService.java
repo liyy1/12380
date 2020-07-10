@@ -7,7 +7,10 @@ import com.domor.utils.ParamUtils;
 import com.github.pagehelper.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -17,7 +20,22 @@ public class ReportService {
 	@Autowired
 	private ReportDao dao;
 
+	@Transactional
 	public int insert(Report record){
+		int num=dao.getnum();
+		num=num+1;
+		String code="";
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+		Date date = new Date();
+		code= sdf.format(date);
+		if(num<10){
+			code=code+"-00"+num;
+		}else if(num<100 && num>=10){
+			code=code+"-0"+num;
+		}else{
+			code=code+"-"+num;
+		}
+		record.setCode(code);
 		return dao.insert(record);
 	}
 
@@ -29,4 +47,8 @@ public class ReportService {
 		return dao.selectById(id);
 	}
 
+
+	public Map<String, Object> getReportById(int id){
+		return dao.getReportById(id);
+	}
 }

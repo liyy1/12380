@@ -25,10 +25,20 @@
   </select>
 
   <insert id="insert" parameterType="com.domor.model.Report">
-    insert into t_report (`type`, jbrname, jbrsex, jbrunit, jbrid, jbrarea, jbraddr, jbrphone, bjbname,
+    insert into t_report (`type`, ip, code,jbrname, jbrsex, jbrunit, jbrid, jbrarea, jbraddr, jbrphone, bjbname,
       bjbsex, bjbduty, bjbarea, bjbunit, bjblevel, bjbtype, bjbmemo, createtime)
-    values (#{type}, #{jbrname}, #{jbrsex}, #{jbrunit}, #{jbrid}, #{jbrarea}, #{jbraddr}, #{jbrphone}, #{bjbname},
+    values (#{type}, #{ip}, #{code}, #{jbrname}, #{jbrsex}, #{jbrunit}, #{jbrid}, #{jbrarea}, #{jbraddr}, #{jbrphone}, #{bjbname},
       #{bjbsex}, #{bjbduty}, #{bjbarea}, #{bjbunit}, #{bjblevel}, #{bjbtype}, #{bjbmemo}, now())
   </insert>
-  
+
+  <select id="getnum"  resultType="int">
+    SELECT max(CONVERT(right(code,3),SIGNED)) num from t_report
+            WHERE DATE_FORMAT(createtime,'%Y')=DATE_FORMAT(now(),'%Y')
+  </select>
+
+  <select id="getReportById" parameterType="int" resultType="map">
+   SELECT * from t_report
+    where id =#{id}
+  </select>
+
 </mapper>

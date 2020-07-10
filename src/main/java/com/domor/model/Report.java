@@ -2,11 +2,13 @@ package com.domor.model;
 
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.Data;
 
 /**
  * t_report
- * @author 
+ *
+ * @author
  */
 @Data
 public class Report implements Serializable {
@@ -17,6 +19,10 @@ public class Report implements Serializable {
      * 1个人；2单位
      */
     private Integer type;
+
+    private String ip;
+
+    private String code;
 
     private String jbrname;
 

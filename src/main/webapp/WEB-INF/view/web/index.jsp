@@ -9,8 +9,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-  <link rel="stylesheet" href="/my/layuiadmin/layui/css/layui.css" media="all">
-  <link rel="stylesheet" href="/my/layuiadmin/style/admin.css" media="all">
   <script src="/my/js/jquery-3.3.1.js" type="text/javascript"></script>
   <script src="/my/js/jquery-3.3.1.min.js" type="text/javascript"></script>
   <link href="/my/css/common.css" type="text/css" rel="stylesheet" />
@@ -23,12 +21,13 @@
   <img class="img2" src="/my/img/zgjn.png"  width="1000" height="80" />
   <img class="img3" src="/my/img/huabiao1.png"  width="200" />
   <img class="img5" src="/my/img/red_bg.png"  width="600" height="150"/>
-  <img class="img6" src="/my/img/line_blue.png"  width="1200" height="80"/>
+  <img class="img6" src="/my/img/line_blue.png"  width="1200" height="50"/>
+  <img class="img7" src="/my/img/line_bg.png"  width="1200" height="50"/>
   <div class="nav">
     <ul>
-      <li><a class="current" href="/index">首&nbsp;&nbsp;页</a></li>
+      <li><a href="/index" class="current">首&nbsp;&nbsp;页</a></li>
       <li><a href="/report"><b>举报须知</b></a></li>
-      <li><a href="/handle"><b>受理介绍</b></a></li>
+      <li><a href="/handle"  ><b>受理介绍</b></a></li>
       <li><a href="/regulations"><b>法规制度</b></a></li>
       <li><a href="/contact_us"><b>意见建议</b></a></li>
     </ul>
@@ -63,16 +62,9 @@
   </div>
   <div class="con_next" id="con_left">
     <ul>
-      <li><a href="/regulations">	中华人民共和国宪法（节选）</a></li>
-      <li><a href="/regulations">	中国共产党党内监督条例</a></li>
-      <li><a href="/regulations">中国共产党章程</a></li>
-      <li><a href="/regulations">党政领导干部选拔任用工作条例</a></li>
-      <li><a href="/regulations">中华人民共和国地方各级人民代表大会和地方各级人民政府</a></li>
-      <li><a href="/regulations">中华人民共和国全国人民代表大会和地方各级人民代表大会</a></li>
-      <li><a href="/regulations">中华人民共和国公务员法</a></li>
-      <li><a href="/regulations">中华人民共和国刑法（节选）</a></li>
-      <li><a href="/regulations">全国人大常委会关于维护互联网安全的决定</a></li>
-      <li><a href="/regulations">关于严肃换届纪律保证换届风清气正的通知</a></li>
+      <c:forEach items="${data}"  var="item" >
+        <li><a href="/reg_detial?id=${item.id}">${item.title}</a></li>
+      </c:forEach>
     </ul>
   </div>
   <div class="clear"></div>

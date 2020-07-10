@@ -6,7 +6,6 @@ import com.domor.model.PagerReturns;
 import com.domor.model.Result;
 import com.domor.service.AdviseService;
 import com.domor.utils.DateUtils;
-import com.domor.utils.MapUtils;
 import com.domor.utils.ParamUtils;
 import com.github.pagehelper.Page;
 import org.apache.poi.ss.usermodel.*;
@@ -65,7 +64,7 @@ public class AdviseController {
 	public String excel(String params, HttpServletResponse response) {
 		try {
 			Map map =  JSON.parseObject(params,Map.class);
-			InputStream inp = new ClassPathResource("/excel/advise.xlsx").getInputStream();
+			InputStream inp = new ClassPathResource("/excel/advise.ftl").getInputStream();
 			Workbook wb = WorkbookFactory.create(inp);
 			//获取sheet1
 			Sheet sheet = wb.getSheetAt(0);

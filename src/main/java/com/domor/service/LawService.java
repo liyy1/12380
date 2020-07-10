@@ -20,6 +20,13 @@ public class LawService {
     public List<Map<String, Object>> query(Map<String, Object> params) {
         return dao.query(params);
     }
+    public List<Map<String, Object>> queryList() {
+        return dao.queryList();
+    }
+
+    public List<Map<String, Object>> queryLawIndex() {
+        return dao.queryLawIndex();
+    }
 
     public Map<String, Object> getById(int id) {
         return dao.getById(id);

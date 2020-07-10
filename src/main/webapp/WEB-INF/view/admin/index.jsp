@@ -132,7 +132,15 @@
       <!-- 主体内容 -->
       <div class="layui-body" id="LAY_app_body">
         <div class="layadmin-tabsbody-item layui-show">
-          <iframe src="" frameborder="0" class="layadmin-iframe"></iframe>
+          <div style="width: 90%;height: 60px;margin:0 auto;line-height: 60px;font-size: 26px" >
+                <div class="layui-anim layui-anim-fadein">请点击左侧栏目进行操作</div>
+              <ul style="width: 100%;margin: 0 auto;font-size: 20px">
+                <li><i class="layui-icon">&#xe60c;</i>   版权所有：中共济宁市任城区委组织部版权所有</li>
+                <li><i class="layui-icon">&#xe60c;</i>   技术支持：济宁城市云计算有限公司</li>
+                <li><i class="layui-icon">&#xe60c;</i>    联系电话：0537-3157970</li>
+              </ul>
+          </div>
+
         </div>
       </div>
 

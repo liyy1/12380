@@ -18,7 +18,8 @@
     <img class="img2" src="/my/img/zgjn.png"  width="1000" height="80" />
     <img class="img3" src="/my/img/huabiao1.png"  width="200" />
     <img class="img5" src="/my/img/red_bg.png"  width="600" height="150"/>
-    <img class="img6" src="/my/img/line_blue.png"  width="1200" height="80"/>
+   <img class="img6" src="/my/img/line_blue.png"  width="1200" height="50"/>
+    <img class="img7" src="/my/img/line_bg.png"  width="1200" height="50"/>
     <div class="nav">
         <ul>
             <li><a href="/index">首&nbsp;&nbsp;页</a></li>
@@ -203,6 +204,7 @@
                 </tr>
             </table>
             <input type="hidden" name="type" value="1">
+            <input type="hidden" name="ip" value="">
         </form>
     </div>
 </div>
@@ -215,10 +217,13 @@
 <script src="/my/layuiadmin/layui/layui.js"></script>
 <script src="/my/js/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="/my/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 <script type="text/javascript" src="/my/js/code.js"></script>
 
 <script type="text/javascript">
     $('#submit_btn').click(function(){
+        var ip=returnCitySN["cip"];
+        $('input[name="ip"]').val(ip);
         var isCode= validateCode();
         if(!isCode){
             return false;

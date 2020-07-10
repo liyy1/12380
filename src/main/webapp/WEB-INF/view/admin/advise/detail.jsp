@@ -24,6 +24,10 @@
                 <td>时间：</td>
                 <td><input class="easyui-datebox" style='width:560px' value="${advise.createtime}" readonly/></td>
             </tr>
+            <tr style="height:50px;">
+                <td>IP地址：</td>
+                <td><input class="easyui-textbox" style='width:560px' value="${advise.ip}" readonly/></td>
+            </tr>
         </table>
     </form>
 </div>

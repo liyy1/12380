@@ -19,6 +19,8 @@ public class Advise implements Serializable {
 
     private String content;
 
+    private String ip;
+
     private Date createtime;
 
     private static final long serialVersionUID = 1L;

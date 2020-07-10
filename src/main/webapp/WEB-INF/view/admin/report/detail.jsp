@@ -39,6 +39,10 @@
                     <td>联系电话：</td>
                     <td>${report.jbrphone}</td>
                 </tr>
+                <tr style="height:50px;">
+                    <td>IP地址：</td>
+                    <td>${report.ip}</td>
+                </tr>
             </table>
         </div>
     </fieldset>

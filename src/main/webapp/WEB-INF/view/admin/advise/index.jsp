@@ -17,7 +17,7 @@
 					   onclick="search_load('advise_list', 'advise_search_form', 'datagrid')">查询</a>
 
 					<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'" style="margin-left: 20px"
-					   onclick="exportExcel()">导出</a>
+					   onclick="exportExcel()">导出所有</a>
 				</div>
 			</form>
 		</div>
@@ -44,6 +44,7 @@ $(function() {
 			{field: 'ck', checkbox: true },
             {field: 'name', title: '姓名', width: 100},
             {field: 'phone', title: '联系电话', width: 150},
+            {field: 'ip', title: 'IP地址', width: 150},
             {field: 'content', title: '意见内容', width: 600},
             {field: 'createtime', title: '时间', width: 150, formatter: dateFormatter}
 	    ]],

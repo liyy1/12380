@@ -20,7 +20,8 @@
     <img class="img2" src="/my/img/zgjn.png"  width="1000" height="80" />
     <img class="img3" src="/my/img/huabiao1.png"  width="200" />
     <img class="img5" src="/my/img/red_bg.png"  width="600" height="150"/>
-    <img class="img6" src="/my/img/line_blue.png"  width="1200" height="80"/>
+   <img class="img6" src="/my/img/line_blue.png"  width="1200" height="50"/>
+    <img class="img7" src="/my/img/line_bg.png"  width="1200" height="50"/>
     <div class="nav">
         <ul>
             <li><a href="/index">首&nbsp;&nbsp;页</a></li>
@@ -79,6 +80,8 @@
 </div>
 <script src="/my/layuiadmin/layui/layui.js"></script>
 <script type="text/javascript" src="/my/js/code.js"></script>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+
 <script type="text/javascript">
     $('#submit_btn').click(function(){
         var isCode= validateCode();
@@ -105,9 +108,10 @@
             alert("电话格式不对");
             return false;
         }
+        var ip=returnCitySN["cip"];
         $.ajax({ url: "/advise/save",
             dataType:'json',
-            data:{name:name,phone:phone,content:message},
+            data:{name:name,phone:phone,content:message,ip:ip},
             success: function(data){
               if(data.status){
                   alert("提交成功！")

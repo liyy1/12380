@@ -11,8 +11,11 @@ public interface ReportDao {
 
     int insert(Report record);
 
+    int getnum();
+
     Report selectById(Integer id);
 
     List<Report> selectList(Map<String, Object> param);
 
+    Map<String, Object> getReportById(int id);
 }

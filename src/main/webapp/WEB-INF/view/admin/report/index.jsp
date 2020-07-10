@@ -17,7 +17,9 @@
 					   onclick="search_load('report_list', 'report_search_form', 'datagrid')">查询</a>
 
 					<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'" style="margin-left: 20px"
-					   onclick="exportExcel()">导出</a>
+					   onclick="exportExcel1()">导出Excel</a>
+					<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'" style="margin-left: 20px"
+					   onclick="exportExcel()">导出所有</a>
 				</div>
 			</form>
 		</div>
@@ -42,12 +44,14 @@ $(function() {
 		sortName: 'id',
 	    columns:[[
 			{field: 'ck', checkbox: true },
+            {field: 'code', title: '序号', width: 150},
             {field: 'bjbarea', title: '区域', width: 150},
             {field: 'bjbunit', title: '单位', width: 150},
             {field: 'bjblevel', title: '级别', width: 150},
             {field: 'bjbtype', title: '问题类型', width: 150},
             {field: 'jbrname', title: '举报人姓名', width: 100},
             {field: 'jbrphone', title: '举报人电话', width: 150},
+            {field: 'ip', title: 'IP地址', width: 150},
             {field: 'createtime', title: '举报时间', width: 150, formatter: dateFormatter}
 	    ]],
         onDblClickRow: function (index, row) {
@@ -66,6 +70,19 @@ function openDetailDialog(id) {
         closed: true,
         cache: false,
         modal: true,
+		buttons: [{
+			text: '导出word',
+			iconCls:'icon-ok',
+			handler: function() {
+				window.location.href = "/admin/report/exportWord?id="+id;
+			}
+		},{
+			text: '取消',
+			iconCls:'icon-cancel',
+			handler: function() {
+				$dialog.dialog('close');
+			}
+		}],
         onClose: function() {
             $dialog.dialog('destroy');
         }
@@ -77,6 +94,18 @@ function exportExcel(){
 	var params = getFormJson('report_search_form');
 	params.type='${reportType}';
 	window.location.href = "/admin/report/excel?params="+JSON.stringify(params);
+}
+function exportExcel1(){
+    var row = $('#report_list').datagrid('getSelected');
+	if(row!==null){
+        console.log(row)
+		var id =row.id;
+        window.location.href = "/admin/report/excelDetail?id="+id;
+	}else{
+        $.messager.alert("温馨提示", "请先选择一行！");
+	}
+	return false;
+    window.location.href = "/admin/report/excel?params="+JSON.stringify(params);
 }
 </script>
 </body>

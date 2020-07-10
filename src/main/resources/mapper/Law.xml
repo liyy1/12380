@@ -25,6 +25,15 @@
 		limit #{start},#{rows}
 	</select>
 
+	<select id="queryList" parameterType="map" resultType="map">
+		SELECT a.* FROM t_law a WHERE a.delete_flag=0
+	</select>
+
+	<select id="queryLawIndex" parameterType="map" resultType="map">
+		SELECT a.id,left(title,28)title FROM t_law a WHERE a.delete_flag=0
+		limit 10
+	</select>
+
     <insert id="insert" parameterType="map">
 		INSERT INTO t_law (title, content, delete_flag, `creator`, `createTime`)
 		VALUES (#{title}, #{content}, 0, #{loginUser}, now())

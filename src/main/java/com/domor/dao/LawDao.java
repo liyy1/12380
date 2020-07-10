@@ -14,6 +14,10 @@ public interface LawDao {
 
     List<Map<String, Object>> query(Map<String, Object> params);
 
+    List<Map<String, Object>> queryList();
+
+    List<Map<String, Object>> queryLawIndex();
+
     void insert(Map<String, Object> params);
 
     void update(Map<String, Object> params);
